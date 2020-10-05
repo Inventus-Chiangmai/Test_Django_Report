@@ -1,0 +1,363 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Delivery Note</title>
+    <link href="{% static fonts.css %}" rel="stylesheet">
+    <style type="text/css">
+        @font-face {
+                    font-family: sans-serif;
+                    src: url("/mnt/c/Users/panya/Truck/weasyreport_example/pdf/templates/pdf/fonts/THSarabunNew.ttf");
+                    }
+        body {
+             font-family: THSarabunNew, sans-serif;
+            }
+    </style>
+    <style>
+                
+            
+        th{
+            margin-top: 10px;
+                text-align: center;
+                padding: 8px;
+                border: 1px solid #ddd;
+                font-size: 10px;
+            }
+        td {
+            margin-top: 10px;
+                text-align: center;
+                padding: 3px;
+                border: 1px solid #ddd;
+                font-size: 10px;
+            }
+    </style>
+</head>
+<body>
+    <div id="header_content" style="text-align: center;">
+    Page <pdf:pagenumber> / <pdf:pagecount>
+    </div>
+    <div id="logo">
+        <img  src="https://uppic.cc/d/yPYF" style="width: 200p;">
+    </div>
+    <div id="text">
+        <p style="font-size: 50px;">Delivery Note (DN)</p>
+    </div>
+    <div id="text1" style="font-size: 14px;">
+        <p>Delivery Date (วันที่ส่งสินค้า) :</p>
+        <p>Truck No. / Truck Type :</p>
+        <p>DN No. (เลขที่เอกสาร) :</p>
+        <p>Trip No. (เที่ยวที่) :</p>
+    </div>
+    <div id="text2" style="font-size: 14px;">
+        <pdf:barcode value="RN-202009-001" type="code128" barheight="1cm"></pdf:barcode>
+        
+    </div>
+    <div id="t1" style="font-size: 14px;">
+        <p>Promised Date (วันที่ต้องการ) :</p>
+        <p>Driver Name (ชื่อพนักงานขับรถ) :</p>
+        <p>Telephone (เบอร์โทรศัพท์) :</p>
+    </div>
+    <div id="thead">
+        <table>
+            <tr>
+                <td rowspan="2" style="width: 6%;"><b>No.<br>(ลำดับที่)</b></td>
+                <td rowspan="2"><b>Order No.<br>(เลขที่ใบสั่งซื้อ)</b></td>
+                <td rowspan="2" style="width: 25%;"><b>Barcode<br>Package Code<br>(บาร์โค้ดรหัสกล่อง)</b></td>
+                <td rowspan="2"><b>Package Code<br>(รหัสกล่อง)</b></td>                                
+                <td colspan="2"><b>Quantity of Package<br>(จำนวนสั่งซื้อ)</b></td>    
+                <td rowspan="2" style="width: 22%;"><b>Remark<br>(หมายเหตุ)</b></td>
+            </tr>
+            <tr>                                
+                <td><b>Order Qty.<br>(จำนวนสั่ง)</b></td>
+                <td><b>Receive Qty.<br>(จำนวนรับ)</b></td>                                           
+            </tr> 
+        </table>
+    </div>
+<table>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    <tr>
+        <td style="width: 6%;">1</td>
+        <td>0000</td>
+        <td style="width: 25%;">01/01/2001</td>
+        <td>000001</td>
+        <td>xxxxxxxxxxx</td>
+        <td >xxxxxxxxxxx</td>
+        <td style="width: 22%;">xxxxxxxxxxx</td>
+    </tr>
+    
+    
+</table>
+<div id="text3" style="font-size: 14px; text-align: center;">
+    <p>ลงรายมือชื่อ-ผู้ส่ง</p>
+    <br>
+    <br>
+    <p>ผู้จัดส่งสินค้า (KOH)</p>
+</div>
+<div id="text4" style="font-size: 14px; text-align: center;">
+    <p>ลงรายมือชื่อ-ขนส่ง</p>
+    <br>
+    <br>
+    <p>ผู้นำส่งสินค้า (พนักงานขับรถ)</p>
+</div>
+<div id="text5" style="font-size: 14px; text-align: center;">
+    <p>ลงรายมือชื่อ-ผู้รับ</p>
+    <br>
+    <br>
+    <p>ผู้รับสินค้า (LAT)</p>
+</div>
+</body>
+<style>
+    @page{
+         size:a4 portrait;
+             @frame header_frame {
+                    -pdf-frame-content:header_content;
+                    left:45pt;
+                    width:512pt;
+                    top:20pt;
+                    height:300pt
+             }
+             @frame thead {   
+                    -pdf-frame-content: thead;
+                    left: 50pt;
+                    top: 230pt;
+                    width: 505pt;
+             }
+             @frame logo {   
+                    -pdf-frame-content: logo;
+                    left: 50pt;
+                    top: 50pt
+             }
+             @frame text {   
+                    -pdf-frame-content: text;
+                    left: 210pt;
+                    top: 50pt
+             }
+             @frame t1 {   
+                    -pdf-frame-content: t1;
+                    left: 320pt;
+                    top: 158pt
+             }
+             @frame text1 {   
+                    -pdf-frame-content: text1;
+                    left: 70pt;
+                    top: 130pt
+             }
+             @frame text2 {   
+                    -pdf-frame-content: text2;
+                    left: 300pt;
+                    top: 110pt
+             }
+             @frame footer_frame {
+                    -pdf-frame-content:footer_content;
+                    left:50pt;
+                    width:512pt;
+                    top:772pt;
+                    height:30pt
+             }
+             @frame text3 {   
+                    -pdf-frame-content: text3;
+                    left: 70pt;
+                    top: 700pt;
+                    width: 150pt
+             }
+             @frame text4 {   
+                    -pdf-frame-content: text4;
+                    left: 225pt;
+                    top: 700pt;
+                    width: 150pt
+             }
+             @frame text5 {   
+                    -pdf-frame-content: text5;
+                    left: 380pt;
+                    top: 700pt;
+                    width: 150pt
+             }
+             @frame content_frame {
+                    left:50pt;
+                    width:505pt;
+                    top:293pt;
+                    height:400pt;
+             }
+        }
+</style>
+</html>
