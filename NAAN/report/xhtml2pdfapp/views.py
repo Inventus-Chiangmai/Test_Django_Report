@@ -23,3 +23,9 @@ class replacement_order_pdf(View):
     def get(self, request, *args, **kwargs):
         pdf = render_to_pdf('xhtml2pdfapp/replacement_order.html')
         return HttpResponse(pdf, content_type='application/pdf')
+
+class delivery_note_pdf(View):
+    def get(self, request, *args, **kwargs):
+        pdf = render_to_pdf('xhtml2pdfapp/delivery_note.html')
+        return HttpResponse(pdf, content_type='application/pdf')
+        
