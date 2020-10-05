@@ -1,0 +1,4 @@
+Django==3
+WeasyPrint
+psycopg2-binary
+xhtml2pdf 
