@@ -98,7 +98,7 @@ def delivery_note_pdf(request):
         query_max = (i+1)*page
         if query_max > all_count:
             query_max = all_count
-        header_report = dn_header_report.objects.filter(dn_no='KOCH200928001')
+        header_report = dn_header_report.objects.filter(dn_no='KOCH200923001')
         list_report = dn_list_report.objects.all().order_by('list_no')[(i*page):query_max]
         html_string = render_to_string('blog/delivery_note.html', {'header_report': header_report, 'list_report': list_report, 'start_index': (i*page), 'page_no': (i+1), 'all_page_no': all_page_no})
         pdf = HTML(string=html_string)
